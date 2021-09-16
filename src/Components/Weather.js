@@ -33,9 +33,9 @@ function Weather(){
         let w = data.weather[0].main;
         setWeather(w)
         let cont = document.querySelector(".main-container");
-        if(w == "Rain") cont.style.backgroundImage = `url(${RainImage})`;
-        else if(w == "Clouds") cont.style.backgroundImage = `url(${CloudsImage})`;
-        else if(w == "Clear") cont.style.backgroundImage = `url(${ClearImage})`;
+        if(w === "Rain") cont.style.backgroundImage = `url(${RainImage})`;
+        else if(w === "Clouds") cont.style.backgroundImage = `url(${CloudsImage})`;
+        else if(w === "Clear") cont.style.backgroundImage = `url(${ClearImage})`;
         else cont.style.backgroundImage = `url(${ThunderStormImage})`;
         let ws = data.wind.speed;
         setWindSpeed(ws)
@@ -64,6 +64,7 @@ function Weather(){
                     }
                 </select>
             </div>
+            
             <div className="weather">
                     <div className="weather-info">
                         <h1>{temp}°c</h1>
